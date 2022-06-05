@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IgdvOJXBEDAzsuzT2vnJaffNL9npTVARnFbMQcQvv50pIwUe8Cm9YDR5rA8azORVg0rIJ8rOD4zRJCcSKUyasw==",
+  "dgSpecHash": "SW291EonKjuE4XCOIsD/2pGv3sW3fZQSxHVCxNf51OFhviErJzsJtwqCHqNU/dS4ip9F/cPxC8vfYkgcOA5NEQ==",
   "success": true,
   "projectFilePath": "D:\\DotnetWorkspace\\E2ESeleniumDemo\\E2ESeleniumDemo.csproj",
   "expectedPackageFiles": [
@@ -106,6 +106,7 @@
     "C:\\Users\\USER\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\selenium.webdriver.chromedriver\\102.0.5005.6102\\selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

@@ -11,18 +11,21 @@ using System.Threading;
 
 namespace E2ESeleniumDemo.TestClasses
 {
-    [TestFixture]
-    class ValidateBooking: BaseTest
+    [TestFixture,Order(1)]
+    class ValidateBooking:BaseTest
     {
 
         LandingPage LandingPage;
         SearchPage SearchPage;
         ExtentTest test;
 
+        
         [SetUp]
         public void init()
         {
             Initialize("chrome").Url = "https://rahulshettyacademy.com/seleniumPractise/#/";
+
+            getTest().Log(Status.Info, "Test Execution started");
         }
         [Test,Order(1)]
         public void directToSearchPage()
@@ -32,13 +35,13 @@ namespace E2ESeleniumDemo.TestClasses
                
                 LandingPage = new LandingPage(getDriver());
                 LandingPage.HitSearchPage();
-                //Adding the logs
-                
 
-            }catch(Exception e)
+            }
+            catch(Exception e)
             {
                 Console.WriteLine(e.StackTrace);
             }
+            getTest().Log(Status.Pass, "Redirection successfull");
             Thread.Sleep(3000);
             
         }
@@ -62,6 +65,8 @@ namespace E2ESeleniumDemo.TestClasses
             {
                 Console.WriteLine(e.StackTrace);
             }
+            
+            getTest().Log(Status.Pass, "Values entered successfully");
             Thread.Sleep(2000);
         }
     }

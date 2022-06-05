@@ -161,7 +161,6 @@ D:\DotnetWorkspace\E2ESeleniumDemo\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.Tes
 D:\DotnetWorkspace\E2ESeleniumDemo\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\DotnetWorkspace\E2ESeleniumDemo\bin\Debug\netcoreapp3.1\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 D:\DotnetWorkspace\E2ESeleniumDemo\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
-D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.csproj.AssemblyReference.cache
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.GeneratedMSBuildEditorConfig.editorconfig
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.AssemblyInfoInputs.cache
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.AssemblyInfo.cs
@@ -170,3 +169,4 @@ D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.cspro
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.dll
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.pdb
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.genruntimeconfig.cache
+D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.csproj.AssemblyReference.cache

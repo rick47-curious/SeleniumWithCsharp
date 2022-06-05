@@ -7,12 +7,13 @@ using System.Threading;
 using AventStack.ExtentReports;
 using NUnit.Framework.Interfaces;
 
-namespace E2ESeleniumDemo
+namespace E2ESeleniumDemo.TestClasses
 {
-    
+    [TestFixture,Order(2)]
     class ParallelTesting :BaseTest
     {
-    
+
+        
 
         [SetUp]
         public void init()
@@ -21,7 +22,8 @@ namespace E2ESeleniumDemo
             //With chrome browser
             Initialize("chrome").Url =  "https://jsbin.com/osebed/2";
 
-            
+            getTest().Log(Status.Info, "Test Execution started");
+
         }
         [Parallelizable(ParallelScope.Self)]
         [Test,Category("Parallel Test"),Category("ModuleTesting"),]
@@ -38,6 +40,7 @@ namespace E2ESeleniumDemo
                 selectElement.SelectByIndex(1);
                 selectElement.SelectByIndex(2);
             }
+            getTest().Log(Status.Pass, "Multiple value selected");
             Thread.Sleep(2000);
            
         }
@@ -58,6 +61,7 @@ namespace E2ESeleniumDemo
                 selectElement.SelectByIndex(1);
                 selectElement.SelectByIndex(2);
             }
+            getTest().Log(Status.Pass, "Multiple Value selected");
             Thread.Sleep(2000);
             
         }

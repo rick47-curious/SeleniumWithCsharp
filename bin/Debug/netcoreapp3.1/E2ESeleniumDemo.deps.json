@@ -17,6 +17,7 @@
           "NUnit3TestAdapter": "3.17.0",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
+          "Selenium.WebDriver.ChromeDriver": "102.0.5005.6102",
           "coverlet.collector": "3.0.2"
         },
         "runtime": {
@@ -1353,6 +1354,7 @@
           }
         }
       },
+      "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {},
       "SharpCompress/0.23.0": {
         "dependencies": {
           "System.Text.Encoding.CodePages": "4.5.1"
@@ -2946,6 +2948,13 @@
       "sha512": "sha512-wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
       "path": "selenium.webdriver/3.141.0",
       "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TGqy37Fn7QXfkOYSLHWorYTPJyeUA88FolgwdDZCafs//FqlTMet4zNGH4nGBOH/bjeWHHBmjmAwtpu/L4iQcg==",
+      "path": "selenium.webdriver.chromedriver/102.0.5005.6102",
+      "hashPath": "selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512"
     },
     "SharpCompress/0.23.0": {
       "type": "package",
