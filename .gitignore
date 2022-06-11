@@ -1,0 +1,6 @@
+﻿#user-specific file
+*.suo
+*.obj
+
+#Ignore Reports folder
+Reports/
