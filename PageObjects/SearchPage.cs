@@ -10,7 +10,7 @@ namespace E2ESeleniumDemo.PageObjects
 {
     class SearchPage
     {
-        private IWebDriver driver;
+        private IWebDriver Driver;
         //Locators
         private string IDDropDown = "ctl00_mainContent_ddl_originStation1_CTXT";
         private string XpathFromTable = "//*[@id='citydropdown']";
@@ -23,13 +23,13 @@ namespace E2ESeleniumDemo.PageObjects
         private string SelectID = "ctl00_mainContent_DropDownListCurrency";
         private string searchButtonID = "ctl00_mainContent_btn_FindFlights";
 
-        public SearchPage(IWebDriver driver)
+        public SearchPage(IWebDriver Driver)
         {
-            this.driver = driver;
+            this.Driver = Driver;
         }
-        public void setTripType(Dictionary<string,string> data)
+        public void SetTripType(Dictionary<string,string> data)
         {
-            IList<IWebElement> tripRadio = driver.FindElements(By.XPath(XpathTripType));
+            IList<IWebElement> tripRadio = Driver.FindElements(By.XPath(XpathTripType));
             if (data["Trip"] =="One Way")
             {
                 tripRadio[0].Click();
@@ -38,54 +38,54 @@ namespace E2ESeleniumDemo.PageObjects
                 tripRadio[1].Click();
             }
         }
-        public void enterFormDetails(Dictionary<string,string> data)
+        public void EnterFormDetails(Dictionary<string,string> data)
         {
-            driver.FindElement(By.Id(IDDropDown)).Click();
+            Driver.FindElement(By.Id(IDDropDown)).Click();
 
-            Properties.setVisibiltyExplicitWait(driver, XpathFromTable, Properties.PropertyType.Xpath);
+            Properties.SetVisibiltyExplicitWait(Driver, XpathFromTable, Properties.PropertyType.Xpath);
 
             //Setting From Location
-            Properties.setLocation(driver,XpathFromLocation, data,"FromLocation");
+            Properties.SetLocation(Driver,XpathFromLocation, data,"FromLocation");
 
             //Setting To Location
-            Properties.setLocation(driver, XpathToLocation, data,"ToLocation");
+            Properties.SetLocation(Driver, XpathToLocation, data,"ToLocation");
         }
 
-        public void enterDateDetails(Dictionary<string,string> data)
+        public void EnterDateDetails(Dictionary<string,string> data)
         {
             //Set Departure date
-            Properties.setDate(driver, data, XpathDate,"DepartDate");
+            Properties.SetDate(Driver, data, XpathDate,"DepartDate");
 
             //Set Return date (if any)
             if (data["ReturnDate"] != string.Empty)
             {
-                Properties.setDate(driver, data, XpathDate,"ReturnDate");
+                Properties.SetDate(Driver, data, XpathDate,"ReturnDate");
             }
         }
         
-        public void selectPassengers(Dictionary<string,string> data)
+        public void SelectPassengers(Dictionary<string,string> data)
         {
-            driver.FindElement(By.XPath("//*[@class='row1 adult-infant-child']/div[@id='divpaxinfo']")).Click();
+            Driver.FindElement(By.XPath("//*[@class='row1 adult-infant-child']/div[@id='divpaxinfo']")).Click();
             //Taking that only adult is considered as a passenger
             if (data["Passenger"] == "1")
             {
 
             }else if (data["Passenger"] == "2")
             {
-                driver.FindElement(By.XPath(XpathIncrementButton)).Click();
+                Driver.FindElement(By.XPath(XpathIncrementButton)).Click();
             }
 
-            driver.FindElement(By.XPath(XpathDoneButton)).Click();
+            Driver.FindElement(By.XPath(XpathDoneButton)).Click();
 
         }
 
-        public void selectCurrency(Dictionary<string,string> data)
+        public void SelectCurrency(Dictionary<string,string> data)
         {
-            SelectElement element = new SelectElement(driver.FindElement(By.Id(SelectID)));
+            SelectElement element = new SelectElement(Driver.FindElement(By.Id(SelectID)));
 
             element.SelectByText(data["Currency"]);
 
-            driver.FindElement(By.Id(searchButtonID)).Click();
+            Driver.FindElement(By.Id(searchButtonID)).Click();
         }
         
     }

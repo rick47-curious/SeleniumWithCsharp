@@ -169,4 +169,3 @@ D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.cspro
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.dll
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.pdb
 D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.genruntimeconfig.cache
-D:\DotnetWorkspace\E2ESeleniumDemo\obj\Debug\netcoreapp3.1\E2ESeleniumDemo.csproj.AssemblyReference.cache

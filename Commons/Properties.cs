@@ -18,7 +18,7 @@ namespace E2ESeleniumDemo.Commons
             Xpath,
             Css
         }
-        public static void setVisibiltyExplicitWait(IWebDriver driver, String locator, PropertyType type)
+        public static void SetVisibiltyExplicitWait(IWebDriver driver, String locator, PropertyType type)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
 
@@ -33,7 +33,7 @@ namespace E2ESeleniumDemo.Commons
             }
         }
 
-        public static void setLocation(IWebDriver driver, string XpathLocator, Dictionary<string, string> data, string locationType)
+        public static void SetLocation(IWebDriver driver, string XpathLocator, Dictionary<string, string> data, string locationType)
         {
             IList<IWebElement> locationColumn = driver.FindElements(By.XPath(XpathLocator));
 
@@ -54,7 +54,7 @@ namespace E2ESeleniumDemo.Commons
             }
         }
 
-        public static void setDate(IWebDriver driver, Dictionary<string, string> data, string Xpath,string dateType)
+        public static void SetDate(IWebDriver driver, Dictionary<string, string> data, string Xpath,string dateType)
         {
             IWebElement calenderTable = driver.FindElement(By.XPath(Xpath));
 

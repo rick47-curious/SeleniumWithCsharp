@@ -23,26 +23,26 @@ namespace E2ESeleniumDemo.TestClasses
             //With chrome browser
             Initialize("chrome").Url = "https://jsbin.com/osebed/2";
 
-            getTest().Log(Status.Info, "Test Execution started");
+            GetTest().Log(Status.Info, "Test Execution started");
 
         }
        
         [Test,Order(1),Category("SmokeTest")]
         public void TestSingleSelection()
         {
-            IWebElement elementList = getDriver().FindElement(By.Id("fruits"));
+            IWebElement elementList = GetDriver().FindElement(By.Id("fruits"));
 
             SelectElement selectElement = new SelectElement(elementList);
 
             selectElement.SelectByText("Apple");
 
-            getTest().Log(Status.Pass, "Apple selected");
+            GetTest().Log(Status.Pass, "Apple selected");
             Thread.Sleep(2000);
         }
         [Test,Order(2),Category("RegressionTest")]
         public void TestMultipleSelection()
         {
-            IWebElement elementList = getDriver().FindElement(By.Id("fruits"));
+            IWebElement elementList = GetDriver().FindElement(By.Id("fruits"));
 
             SelectElement selectElement = new SelectElement(elementList);
 
@@ -52,7 +52,7 @@ namespace E2ESeleniumDemo.TestClasses
                 selectElement.SelectByIndex(1);
                 selectElement.SelectByIndex(2);
             }
-            getTest().Log(Status.Pass, "Multiple Value selected");
+            GetTest().Log(Status.Pass, "Multiple Value selected");
             Thread.Sleep(2000);
         }
     }

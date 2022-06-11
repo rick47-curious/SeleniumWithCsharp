@@ -17,23 +17,23 @@ namespace E2ESeleniumDemo.TestClasses
 
         LandingPage LandingPage;
         SearchPage SearchPage;
-        ExtentTest test;
+        
 
         
         [SetUp]
-        public void init()
+        public void Init()
         {
             Initialize("chrome").Url = "https://rahulshettyacademy.com/seleniumPractise/#/";
 
-            getTest().Log(Status.Info, "Test Execution started");
+            GetTest().Log(Status.Info, "Test Execution started");
         }
         [Test,Order(1)]
-        public void directToSearchPage()
+        public void DirectToSearchPage()
         {
             try
             {
                
-                LandingPage = new LandingPage(getDriver());
+                LandingPage = new LandingPage(GetDriver());
                 LandingPage.HitSearchPage();
 
             }
@@ -41,32 +41,32 @@ namespace E2ESeleniumDemo.TestClasses
             {
                 Console.WriteLine(e.StackTrace);
             }
-            getTest().Log(Status.Pass, "Redirection successfull");
+            GetTest().Log(Status.Pass, "Redirection successfull");
             Thread.Sleep(3000);
             
         }
         [Test,Order(2)]
-        [TestCaseSource(typeof(Utilities.ExcelReaderUtil), nameof(Utilities.ExcelReaderUtil.getTestData))]
-        public void searchFlights(Dictionary<string, string> data)
+        [TestCaseSource(typeof(Utilities.ExcelReaderUtil), nameof(Utilities.ExcelReaderUtil.GetTestData))]
+        public void SearchFlights(Dictionary<string, string> data)
         {
             try
             {
                
-                LandingPage = new LandingPage(getDriver());
+                LandingPage = new LandingPage(GetDriver());
                 SearchPage = LandingPage.HitSearchPage();
 
-                SearchPage.setTripType(data);
-                SearchPage.enterFormDetails(data);
-                SearchPage.enterDateDetails(data);
-                SearchPage.selectPassengers(data);
-                SearchPage.selectCurrency(data);
+                SearchPage.SetTripType(data);
+                SearchPage.EnterFormDetails(data);
+                SearchPage.EnterDateDetails(data);
+                SearchPage.SelectPassengers(data);
+                SearchPage.SelectCurrency(data);
                
             }catch(Exception e)
             {
                 Console.WriteLine(e.StackTrace);
             }
             
-            getTest().Log(Status.Pass, "Values entered successfully");
+            GetTest().Log(Status.Pass, "Values entered successfully");
             Thread.Sleep(2000);
         }
     }

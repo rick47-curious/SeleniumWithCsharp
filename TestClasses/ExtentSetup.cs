@@ -14,20 +14,20 @@ namespace E2ESeleniumDemo.TestClasses
     class ExtentSetup
     {
        
-        public static ExtentReports report;
+        public static ExtentReports Report;
         
         [OneTimeSetUp]
         protected void InitializeReporting()
         {
-            report = new ExtentReports();
+            Report = new ExtentReports();
             var reporter = new ExtentHtmlReporter(@"D:\DotnetWorkspace\E2ESeleniumDemo\Reports\Report.html");
-            report.AttachReporter(reporter);
+            Report.AttachReporter(reporter);
         }
 
         [OneTimeTearDown]
         protected void FlushReport()
         {
-            report.Flush();
+            Report.Flush();
         }
     }
 }

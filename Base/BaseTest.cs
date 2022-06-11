@@ -15,7 +15,6 @@ namespace E2ESeleniumDemo.Base
 {
     public class BaseTest
     {
-       public ExtentReports report;
        
        public static ThreadLocal<IWebDriver> tlDriver = new ThreadLocal<IWebDriver>();
        public static ThreadLocal<ExtentTest> tlTest = new ThreadLocal<ExtentTest>();
@@ -23,7 +22,7 @@ namespace E2ESeleniumDemo.Base
         [SetUp]
         public void InitReport()
         {
-            tlTest.Value = ExtentSetup.report.CreateTest(TestContext.CurrentContext.Test.ClassName);
+            tlTest.Value = ExtentSetup.Report.CreateTest(TestContext.CurrentContext.Test.ClassName);
         }
         protected IWebDriver Initialize(string browserType)
         { 
@@ -36,20 +35,20 @@ namespace E2ESeleniumDemo.Base
             {
                  tlDriver.Value = new EdgeDriver();
             }
-            getDriver().Manage().Window.Maximize();
-            getDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            GetDriver().Manage().Window.Maximize();
+            GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             
-            return getDriver();
+            return GetDriver();
         }
         
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static IWebDriver getDriver()
+        public static IWebDriver GetDriver()
         {
             return tlDriver.Value;
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
-        public static ExtentTest getTest()
+        public static ExtentTest GetTest()
         {
             return tlTest.Value;
         }
@@ -62,18 +61,18 @@ namespace E2ESeleniumDemo.Base
             switch (Status)
             {
                 case TestStatus.Passed:
-                    getTest().Log(AventStack.ExtentReports.Status.Pass, "TestCase Passed");
+                    GetTest().Log(AventStack.ExtentReports.Status.Pass, "TestCase Passed");
                     break;
                 case TestStatus.Failed:
-                    getTest().Log(AventStack.ExtentReports.Status.Fail, "TestCase Failed");
-                    getTest().AddScreenCaptureFromBase64String(ScreenshotUtility.TakeScreenshot(getDriver()));
+                    GetTest().Log(AventStack.ExtentReports.Status.Fail, "TestCase Failed");
+                    GetTest().AddScreenCaptureFromBase64String(ScreenshotUtility.TakeScreenshot(GetDriver()));
                      break;
                 default:
-                    getTest().Log(AventStack.ExtentReports.Status.Info, "Something went wrong!");
+                    GetTest().Log(AventStack.ExtentReports.Status.Info, "Something went wrong!");
                     break;
 
             }
-            getDriver().Quit();    
+            GetDriver().Quit();    
 
         }
          

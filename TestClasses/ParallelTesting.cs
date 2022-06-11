@@ -16,13 +16,13 @@ namespace E2ESeleniumDemo.TestClasses
         
 
         [SetUp]
-        public void init()
+        public void Init()
         {           
             
             //With chrome browser
             Initialize("chrome").Url =  "https://jsbin.com/osebed/2";
 
-            getTest().Log(Status.Info, "Test Execution started");
+            GetTest().Log(Status.Info, "Test Execution started");
 
         }
         [Parallelizable(ParallelScope.Self)]
@@ -30,7 +30,7 @@ namespace E2ESeleniumDemo.TestClasses
         public void TestMultipleDropDown()
         {   
           
-            IWebElement elementList = getDriver().FindElement(By.Id("fruits"));
+            IWebElement elementList = GetDriver().FindElement(By.Id("fruits"));
 
             SelectElement selectElement = new SelectElement(elementList);
 
@@ -40,7 +40,7 @@ namespace E2ESeleniumDemo.TestClasses
                 selectElement.SelectByIndex(1);
                 selectElement.SelectByIndex(2);
             }
-            getTest().Log(Status.Pass, "Multiple value selected");
+            GetTest().Log(Status.Pass, "Multiple value selected");
             Thread.Sleep(2000);
            
         }
@@ -51,7 +51,7 @@ namespace E2ESeleniumDemo.TestClasses
         {
            
 
-            IWebElement elementList = getDriver().FindElement(By.Id("fruits"));
+            IWebElement elementList = GetDriver().FindElement(By.Id("fruits"));
 
             SelectElement selectElement = new SelectElement(elementList);
 
@@ -61,7 +61,7 @@ namespace E2ESeleniumDemo.TestClasses
                 selectElement.SelectByIndex(1);
                 selectElement.SelectByIndex(2);
             }
-            getTest().Log(Status.Pass, "Multiple Value selected");
+            GetTest().Log(Status.Pass, "Multiple Value selected");
             Thread.Sleep(2000);
             
         }

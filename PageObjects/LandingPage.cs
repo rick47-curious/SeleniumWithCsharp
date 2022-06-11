@@ -8,10 +8,10 @@ namespace E2ESeleniumDemo.PageObjects
 {
     class LandingPage
     {
-        private IWebDriver driver;
-        public LandingPage(IWebDriver driver)
+        private IWebDriver Driver;
+        public LandingPage(IWebDriver Driver)
         {
-            this.driver = driver;
+            this.Driver = Driver;
         }
         //Locators
        private string XpathpageLink = "(//a[@class='cart-header-navlink'])[2]";
@@ -20,13 +20,13 @@ namespace E2ESeleniumDemo.PageObjects
         public SearchPage HitSearchPage()
         {
 
-            driver.FindElement(By.XPath(XpathpageLink)).Click();
+            Driver.FindElement(By.XPath(XpathpageLink)).Click();
 
-            IList<string> windows = driver.WindowHandles;
+            IList<string> windows = Driver.WindowHandles;
             
-            driver.SwitchTo().Window(windows[1]);
+            Driver.SwitchTo().Window(windows[1]);
             
-            return new SearchPage(driver);
+            return new SearchPage(Driver);
         }
     }
 }

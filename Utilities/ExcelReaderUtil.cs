@@ -8,7 +8,7 @@ namespace E2ESeleniumDemo.Utilities
 {
     class ExcelReaderUtil
     {
-        public static Object[] getTestData()
+        public static Object[] GetTestData()
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             var Stream = File.Open("D:\\DotnetWorkspace\\E2ESeleniumDemo\\Resources\\TestData.xlsx", FileMode.Open, FileAccess.Read);
